@@ -6,11 +6,10 @@ import { setX } from '../store/vault/vault.slice';
 
 export const getStaticProps = wrapper.getStaticProps(store => () => {
   // this gets rendered on the server, then not on the client
-  console.debug('In Static Props');
-  store.dispatch(setX('Initial State'));
+  store.dispatch(setX('Set as a dispatch from getStaticProps') );
   return {
     // does not seem to work with key `initialState`
-    props: { someKey: 'INIITIAL STATE!' }
+    props: { someKey: 'returned from getStaticProps' }
   }
 })
 

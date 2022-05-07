@@ -4,7 +4,7 @@ export const vaultSlice = createSlice({
   name: 'vault',
 
   initialState: {
-    x: 'I AM SPARTACUS'
+    x: 'Initial state'
   },
 
   reducers: {
